@@ -171,11 +171,11 @@ const SignUp = () => {
                                     <div className="ml-2 text-sm leading-5">
                                         <span className="font-medium text-gray-700">
                                             Eu li e aceito os
-                                            <a href="https://kiwify.com.br/termos-de-uso" target="_blank" className="underline">
+                                            <a href="https://kiwify.com.br/termos-de-uso" target="_blank" rel="noreferrer" className="underline">
                                                 termos de uso</a>,
-                                            <a href="https://kiwify.com.br/licenca-de-uso-software" target="_blank" className="underline">
+                                            <a href="https://kiwify.com.br/licenca-de-uso-software" target="_blank" rel="noreferrer" className="underline">
                                                 termos de licença de uso de software</a>,
-                                            <a href="https://kiwify.com.br/politica-de-conteudo" target="_blank" className="underline">
+                                            <a href="https://kiwify.com.br/politica-de-conteudo" target="_blank" rel="noreferrer" className="underline">
                                                 política de conteúdo
                                             </a>
                                             da Kiwify
