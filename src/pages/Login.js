@@ -3,18 +3,18 @@ import { React, useState } from "react";
 import { Images } from "../assets/images";
 
 const Login = () => {
-    const validation = process.env.REACT_APP_EMAIL_VALIDATION;
+    // const validation = process.env.REACT_APP_EMAIL_VALIDATION;
     const [userEmail, setuserEmail] = useState(null)
     const [isEmailInvalid, setisEmailInvalid] = useState('')
     const [userPass, setUserPass] = useState(null)
-
 
     const { Logo } = Images
 
     function ValidateEmail(inputText) {
 
-
-
+        // const validation = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        const validation = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        console.log("validation", validation.toString())
         if (inputText.match(validation)) {
             setisEmailInvalid("")
             return true;

@@ -3,7 +3,7 @@ import { React, useState } from "react";
 import { Images } from "../assets/images";
 
 const ResetPassword = () => {
-    const validation = process.env.REACT_APP_EMAIL_VALIDATION;
+    // const validation = process.env.REACT_APP_EMAIL_VALIDATION;
 
 
     const [userEmail, setuserEmail] = useState(null)
@@ -12,7 +12,7 @@ const ResetPassword = () => {
     const { Logo } = Images
     function ValidateEmail(inputText) {
 
-
+        const validation = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
         if (inputText.match(validation)) {
             setisEmailInvalid("")

@@ -4,7 +4,7 @@ import { Images } from "../assets/images";
 import '../App.css'
 
 const SignUp = () => {
-    const validation = process.env.REACT_APP_EMAIL_VALIDATION;
+    // const validation = process.env.REACT_APP_EMAIL_VALIDATION;
 
     const [userEmail, setuserEmail] = useState(null)
     const [isEmailInvalid, setisEmailInvalid] = useState('')
@@ -16,7 +16,7 @@ const SignUp = () => {
 
     const { Logo } = Images
     function ValidateEmail(inputText) {
-
+        const validation = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
         if (inputText.type === 'email')
             if (inputText.value.match(validation)) {
