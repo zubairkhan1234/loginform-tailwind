@@ -3,10 +3,11 @@ import { React, useState } from "react";
 import { Images } from "../assets/images";
 
 const Login = () => {
-    const { EMAIL_VALIDATION } = process.env;
+    const validation = process.env.REACT_APP_EMAIL_VALIDATION;
     const [userEmail, setuserEmail] = useState(null)
     const [isEmailInvalid, setisEmailInvalid] = useState('')
     const [userPass, setUserPass] = useState(null)
+
 
     const { Logo } = Images
 
@@ -14,7 +15,7 @@ const Login = () => {
 
 
 
-        if (inputText.match(EMAIL_VALIDATION)) {
+        if (inputText.match(validation)) {
             setisEmailInvalid("")
             return true;
         }

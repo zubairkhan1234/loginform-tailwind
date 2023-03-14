@@ -4,7 +4,8 @@ import { Images } from "../assets/images";
 import '../App.css'
 
 const SignUp = () => {
-    const { EMAIL_VALIDATION } = process.env;
+    const validation = process.env.REACT_APP_EMAIL_VALIDATION;
+
     const [userEmail, setuserEmail] = useState(null)
     const [isEmailInvalid, setisEmailInvalid] = useState('')
     const [isreEmailInvalid, setreisEmailInvalid] = useState('')
@@ -18,7 +19,7 @@ const SignUp = () => {
 
 
         if (inputText.type === 'email')
-            if (inputText.value.match(EMAIL_VALIDATION)) {
+            if (inputText.value.match(validation)) {
                 // console.log("Valid email address!");
                 if (inputText.value === reEmail && isreEmailInvalid === "") setisEmailSame(false)
                 setisEmailInvalid("")
@@ -30,7 +31,7 @@ const SignUp = () => {
                 return false;
             }
         if (inputText.type === "ReEmail")
-            if (inputText.value.match(EMAIL_VALIDATION)) {
+            if (inputText.value.match(validation)) {
                 // console.log("Valid email address!");
                 if (inputText.value === userEmail && isEmailInvalid === "") setisEmailSame(false)
                 setreisEmailInvalid("")
