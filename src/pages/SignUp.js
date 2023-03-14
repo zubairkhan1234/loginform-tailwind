@@ -15,7 +15,7 @@ const SignUp = () => {
     const { Logo } = Images
     function ValidateEmail(inputText) {
 
-        var mailformat = '/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/';
+        var mailformat = "/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/";
 
         if (inputText.type === 'email')
             if (inputText.value.match(mailformat)) {
