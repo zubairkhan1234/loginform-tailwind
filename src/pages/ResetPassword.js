@@ -11,7 +11,7 @@ const ResetPassword = () => {
 
     function ValidateEmail(inputText) {
 
-        var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        var mailformat = '/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/';
 
 
         if (inputText.match(mailformat)) {
@@ -58,7 +58,10 @@ const ResetPassword = () => {
                                     E-mail
                                 </label>
                                 <div>
-                                    <input onBlur={() => { if (userEmail?.length <= 1 || userEmail?.length === undefined) { setuserEmail(""); setisEmailInvalid("invalid") } }} type="text" onChange={(e) => { setuserEmail(e.target.value); console.log(e.target.value) }} autoComplete="username" value={userEmail ? userEmail : ""} name="email" className={`${userEmail?.length < 1 && 'border-red-500'} form-input block py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5  w-full`} />
+                                    <input onBlur={() => { if (userEmail?.length <= 1 || userEmail?.length === undefined) { setuserEmail(""); setisEmailInvalid("invalid") } }} type="text" onChange={(e) => {
+                                        ValidateEmail(e.target.value)
+                                        setuserEmail(e.target.value)
+                                    }} autoComplete="username" value={userEmail ? userEmail : ""} name="email" className={`${userEmail?.length < 1 && 'border-red-500'} form-input block py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5  w-full`} />
                                     <div className="text-red-500 text-xs mt-1">
                                         <div />
                                     </div>
