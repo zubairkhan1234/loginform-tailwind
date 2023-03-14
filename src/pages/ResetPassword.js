@@ -28,7 +28,6 @@ const ResetPassword = () => {
 
     const resetPass = () => {
         if (userEmail?.length <= 1 || userEmail?.length === undefined) { setuserEmail(""); setisEmailInvalid("invalid") }
-        console.log(isEmailSame)
     }
     return (
         <section className="bg-gray-50 dark:bg-gray-900">

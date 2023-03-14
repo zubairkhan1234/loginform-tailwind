@@ -29,7 +29,6 @@ const Login = () => {
     const loginNow = () => {
         if (userEmail?.length <= 1 || userEmail?.length === undefined) { setuserEmail(""); setisEmailInvalid("invalid") }
         if (userPass?.length <= 1 || userPass?.length === undefined) setUserPass("")
-        console.log(isEmailSame)
     }
 
     return (
